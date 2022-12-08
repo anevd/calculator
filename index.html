@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Calculator</title>
+		<style>
+			* {
+				font-family: sans-serif;
+			}
+			.calculator {
+				height: 350px;
+				width: 250px;
+				padding: 30px;
+				background-color: #000002;
+			}
+
+			.title {
+				color: #fff;
+				font-size: 35px;
+				margin: 0;
+				text-align: center;
+			}
+
+			.content {
+				height: 70%;
+				margin-top: 40px;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+			}
+
+			.button {
+				width: 45%;
+				height: 45%;
+				background-color: #ff9502;
+				border: none;
+				border-radius: 20px;
+				color: #fff;
+				font-size: 50px;
+				cursor: pointer;
+			}
+
+			.button:hover {
+				background-color: #f8b351;
+			}
+		</style>
+	</head>
+	<body>
+		<section class="calculator">
+			<h1 class="title">Калькулятор</h1>
+			<div class="content">
+				<button class="button" onClick="sumResult()">+</button>
+				<button class="button" onClick="subtractionResult()">–</button>
+				<button class="button" onClick="multiplicationResult()">&times;</button>
+				<button class="button" onClick="divisionResult()">&divide;</button>
+			</div>
+		</section>
+		<script>
+			function sumResult() {
+				let a = +prompt("Введите первое число");
+				let b = +prompt("Введите второе число");
+				let sum = a + b;
+				alert(`Сумма чисел равна ${sum}`);
+			}
+
+			function subtractionResult() {
+				let a = +prompt("Введите первое число");
+				let b = +prompt("Введите второе число");
+				let subtraction = a - b;
+				alert(`Разность чисел равна ${subtraction}`);
+			}
+
+			function multiplicationResult() {
+				let a = +prompt("Введите первое число");
+				let b = +prompt("Введите второе число");
+				let multiplication = a * b;
+				alert(`Произведение чисел равно ${multiplication}`);
+			}
+
+			function divisionResult() {
+				let a = +prompt("Введите первое число");
+				let b = +prompt("Введите второе число");
+				let division = a / b;
+				alert(`Частное чисел равно ${division}`);
+			}
+		</script>
+	</body>
+</html>
