@@ -23,16 +23,36 @@ function calculateResult() {
 	let secondNum = +document.querySelector(".secondNum").value;
 	if (document.querySelector(".symbol").textContent == document.querySelector(".plus").value) {
 		let result = firstNum + secondNum;
-		document.querySelector(".result__area").innerHTML = +result.toFixed(5);
+		if (isFinite(result)) {
+			document.querySelector(".result__area").innerHTML = +result.toFixed(5);
+		} else {
+			let result = "Ошибка";
+			document.querySelector(".result__area").innerHTML = result;
+		}
 	} else if (document.querySelector(".symbol").textContent == document.querySelector(".minus").value) {
 		let result = firstNum - secondNum;
-		document.querySelector(".result__area").innerHTML = +result.toFixed(5);
+		if (isFinite(result)) {
+			document.querySelector(".result__area").innerHTML = +result.toFixed(5);
+		} else {
+			let result = "Ошибка";
+			document.querySelector(".result__area").innerHTML = result;
+		}
 	} else if (document.querySelector(".symbol").textContent == document.querySelector(".times").value) {
 		let result = firstNum * secondNum;
-		document.querySelector(".result__area").innerHTML = +result.toFixed(5);
+		if (isFinite(result)) {
+			document.querySelector(".result__area").innerHTML = +result.toFixed(5);
+		} else {
+			let result = "Ошибка";
+			document.querySelector(".result__area").innerHTML = result;
+		}
 	} else if (document.querySelector(".symbol").textContent == document.querySelector(".divide").value) {
 		let result = firstNum / secondNum;
-		document.querySelector(".result__area").innerHTML = +result.toFixed(5);
+		if (isFinite(result)) {
+			document.querySelector(".result__area").innerHTML = +result.toFixed(5);
+		} else {
+			let result = "Ошибка";
+			document.querySelector(".result__area").innerHTML = result;
+		}
 	} else {
 		let result = "Ошибка";
 		document.querySelector(".result__area").innerHTML = result;
