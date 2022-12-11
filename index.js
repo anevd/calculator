@@ -1,27 +1,40 @@
-function sumResult() {
-	let a = +prompt("Введите первое число");
-	let b = +prompt("Введите второе число");
-	let sum = a + b;
-	alert(`Сумма чисел равна ${sum}`);
+function plus() {
+	let sign = document.querySelector(".plus").value;
+	document.querySelector(".symbol").innerHTML = sign;
 }
 
-function subtractionResult() {
-	let a = +prompt("Введите первое число");
-	let b = +prompt("Введите второе число");
-	let subtraction = a - b;
-	alert(`Разность чисел равна ${subtraction}`);
+function minus() {
+	let sign = document.querySelector(".minus").value;
+	document.querySelector(".symbol").innerHTML = sign;
 }
 
-function multiplicationResult() {
-	let a = +prompt("Введите первое число");
-	let b = +prompt("Введите второе число");
-	let multiplication = a * b;
-	alert(`Произведение чисел равно ${multiplication}`);
+function times() {
+	let sign = document.querySelector(".times").value;
+	document.querySelector(".symbol").innerHTML = sign;
 }
 
-function divisionResult() {
-	let a = +prompt("Введите первое число");
-	let b = +prompt("Введите второе число");
-	let division = a / b;
-	alert(`Частное чисел равно ${division}`);
+function divide() {
+	let sign = document.querySelector(".divide").value;
+	document.querySelector(".symbol").innerHTML = sign;
+}
+
+function calculateResult() {
+	let firstNum = +document.querySelector(".firstNum").value;
+	let secondNum = +document.querySelector(".secondNum").value;
+	if (document.querySelector(".symbol").textContent == document.querySelector(".plus").value) {
+		let result = firstNum + secondNum;
+		document.querySelector(".result__area").innerHTML = +result.toFixed(5);
+	} else if (document.querySelector(".symbol").textContent == document.querySelector(".minus").value) {
+		let result = firstNum - secondNum;
+		document.querySelector(".result__area").innerHTML = +result.toFixed(5);
+	} else if (document.querySelector(".symbol").textContent == document.querySelector(".times").value) {
+		let result = firstNum * secondNum;
+		document.querySelector(".result__area").innerHTML = +result.toFixed(5);
+	} else if (document.querySelector(".symbol").textContent == document.querySelector(".divide").value) {
+		let result = firstNum / secondNum;
+		document.querySelector(".result__area").innerHTML = +result.toFixed(5);
+	} else {
+		let result = "Ошибка";
+		document.querySelector(".result__area").innerHTML = result;
+	}
 }

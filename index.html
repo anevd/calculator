@@ -10,11 +10,21 @@
 	<body>
 		<section class="calculator">
 			<h1 class="title">Калькулятор</h1>
-			<div class="content">
-				<button class="button" onClick="sumResult()">+</button>
-				<button class="button" onClick="subtractionResult()">–</button>
-				<button class="button" onClick="multiplicationResult()">&times;</button>
-				<button class="button" onClick="divisionResult()">&divide;</button>
+			<div class="calculation">
+				<input type="text" class="input firstNum" />
+				<div class="symbol"></div>
+				<input type="text" class="input secondNum" />
+			</div>
+			<button class="button" onclick="calculateResult()">Посчитать</button>
+			<div class="result">
+				<h2 class="title_result">Результат:</h2>
+				<div class="result__area"></div>
+			</div>
+			<div class="sign">
+				<button class="button sign__btn plus" value="+" onclick="plus()">+</button>
+				<button class="button sign__btn minus" value="–" onclick="minus()">–</button>
+				<button class="button sign__btn times" value="&times;" onclick="times()">&times;</button>
+				<button class="button sign__btn divide" value="&divide;" onclick="divide()">&divide;</button>
 			</div>
 		</section>
 		<script src="index.js"></script>
