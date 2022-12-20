@@ -92,6 +92,10 @@
 	font-size: 2rem;
 }
 
+.result__area_long {
+	font-size: 13px;
+}
+
 .sign {
 	height: 50%;
 	margin-top: 20px;

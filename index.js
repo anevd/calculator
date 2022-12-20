@@ -49,6 +49,10 @@ function calculateResult() {
 		let result = firstNum / secondNum;
 		if (isFinite(result)) {
 			document.querySelector(".result__area").innerHTML = +result.toFixed(5);
+		} else if (result == Infinity) {
+			let result = "На ноль делить нельзя!";
+			document.querySelector(".result__area").classList.add("result__area_long");
+			document.querySelector(".result__area").innerHTML = result;
 		} else {
 			let result = "Ошибка";
 			document.querySelector(".result__area").innerHTML = result;
